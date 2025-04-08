@@ -11,7 +11,7 @@
 
     <!-- WEBGL GAME IN FULLSCREEN - COPY AND PASTE THIS CSS -->
     <style>
-      /* Make sure the background covers the entire screen */
+      /* Ensure the background covers the entire screen */
       html, body {
         margin: 0;
         padding: 0;
@@ -21,7 +21,7 @@
         background-size: cover; /* Cover the entire screen */
       }
 
-      /* Existing styles */
+      /* Keep the existing font and layout */
       body {
         font-family: "Myriad Pro", Myriad, "Helvetica Neue", Helvetica, Arial, sans-serif;
       }
@@ -30,6 +30,7 @@
         background: #333;
       }
 
+      /* Ensure the game container keeps its original size */
       #errorBrowserBlock, #loadingBlock, .webgl-content {
         padding: 0;
         position: absolute;
@@ -47,9 +48,11 @@
         position: absolute;
         height: 100%;
         width: 100%;
+        top: 0; /* Ensure the game container stays in place */
+        left: 0; /* Ensure the game container stays in place */
       }
 
-      /* Your other existing styles */
+      /* Existing styling for other elements */
       #fullScreenButton, #logoname {
         height: 35px;
         width: 35px;
@@ -72,7 +75,32 @@
         background-size: 141px 20px;
       }
 
-      /* ... other styles remain the same */
+      /* Ensure the webgl content and other components retain their proper layout */
+      .webgl-content * {
+        border: 0;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* The remaining styles are the same, ensuring your layout doesn't change */
+      .webgl-content .logo {
+        position: absolute;
+        left: 50%;
+        top: 45%;
+        transform: translate(-50%, -50%);
+      }
+      .webgl-content .progress {
+        height: 18px;
+        width: 141px;
+        margin-top: 90px;
+      }
+      .webgl-content .footer {
+        margin-top: 5px;
+        height: 38px;
+        line-height: 38px;
+        font-family: Helvetica, Verdana, Arial, sans-serif;
+        font-size: 18px;
+      }
     </style>
 
     <script src="TemplateData/UnityProgress.js"></script>
@@ -83,7 +111,7 @@
   </head>
   <body>
     <div class="webgl-content">
-      <!-- WEBGL GAME IN FULLSCREEN - COPY AND PASTE THIS CSS - IMPORTANT: WIDTH: 100%; HEIGHT:100% -->
+      <!-- Keep the game container size as it was -->
       <div id="gameContainer" style="width: 100%; height: 100%;"></div>
     </div>
   </body>
